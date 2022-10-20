@@ -48,7 +48,7 @@ const person6 = {
 const personsArray = [person1, person2, person3, person4, person5, person6];
 console.log(personsArray);
 
-// logs kays value
+// logs keys value
 for (let i = 0; i < personsArray.length; i++) {
     const thisPerson = personsArray[i];
     // name to print
@@ -57,30 +57,13 @@ for (let i = 0; i < personsArray.length; i++) {
     const thisRole = (thisPerson.role);
     // url to print
     const thisUrl = (thisPerson.photoUrl);
-    
-    // for each personWrapper
-    for (let p = 0; p < personWrappers.lengtp; p++){
 
-        // for each nameWrapper
-        for (let n = 0; n < nameWrappers.length; n++) {
-            const thisNameWrapper = nameWrappers[n];
-            // print name
-            thisNameWrapper.innerHTML = thisName;
-        }
-
-        // for each roleWrapper
-        for (let n = 0; n < roleWrappers.length; n++) {
-            const thisRoleWrapper = roleWrappers[n];
-            // print role
-            thisRoleWrapper.innerHTML = thisRole;
-        }
-
-
-
-
+    console.log(thisName);
+    for (let j = 0; j < personWrappers.length; j++) {
+        const thisPersonWrapper = personWrappers[j];
+        
+        thisPersonWrapper.innerHTML = thisName;
 
     }
-
-
+    
 }
-
