@@ -44,26 +44,38 @@ const person6 = {
     photoUrl: "barbara-ramos-graphic-designer.jpg"
 }
 
-// create persons array
+// create arrays
 const personsArray = [person1, person2, person3, person4, person5, person6];
-console.log(personsArray);
+let nameArray = [];
+let roleArray = [];
+let urlArray = [];
 
-// logs keys value
+
+// push keys value in arrays
 for (let i = 0; i < personsArray.length; i++) {
     const thisPerson = personsArray[i];
-    // name to print
+
+    // name to push
     const thisName = (thisPerson.name);
-    // role to print
+    nameArray.push(thisName)
+
+    // role to push
     const thisRole = (thisPerson.role);
-    // url to print
+    roleArray.push(thisRole)
+
+    // url to push
     const thisUrl = (thisPerson.photoUrl);
+    urlArray.push(thisUrl)
+}
+console.log(nameArray);
+console.log(roleArray);
+console.log(urlArray);
 
-    console.log(thisName);
-    for (let j = 0; j < personWrappers.length; j++) {
-        const thisPersonWrapper = personWrappers[j];
-        
-        thisPersonWrapper.innerHTML = thisName;
-
-    }
-    
+for (let i = 0; i < 6; i++){
+    const thisNameWrapper = nameWrappers[i];
+    thisNameWrapper.innerHTML = nameArray[i];
+    const thisRoleWrapper = roleWrappers[i];
+    thisRoleWrapper.innerHTML = roleArray[i];
+    const thisUrlWrapper = urlWrappers[i];
+    thisUrlWrapper.innerHTML = `<img src="img/${urlArray[i]}" alt="">`;
 }
