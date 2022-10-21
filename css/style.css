@@ -1,0 +1,60 @@
+:root{
+    --primary-color: #e57373;
+    --primary-light-color: #ffa4a2;
+    --secondary-color: #b71c1c;
+    --secondary-light-color: #f05545;
+}
+
+img{
+    max-width: 100%;
+}
+
+main{
+    background-color: var(--primary-color);
+    color: rgb(40, 40, 40);
+    min-height: 100vh;
+    padding-top: 2rem;
+}
+
+h1, h5{
+    text-align: center;
+    font-weight: 300;
+}
+
+
+h1{
+    padding: 1rem 0;
+    box-shadow: 0 0 100px 2px var(--secondary-color);
+    background-color: var(--primary-light-color);
+    border-radius: 0 0 20px 20px ;
+}
+
+.persons-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.person{
+    width: calc(100% / 3 - 1rem);
+    border: 3px solid var(--primary-light-color);
+    background-color: var(--primary-light-color);
+    margin-top: 2rem;
+    border-radius: 0 0 20px 20px ;
+    box-shadow: 0 0 20px 2px var(--secondary-color);
+}
+
+.person .name-wrapper,
+.person .role-wrapper{
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.person .name-wrapper{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.person .role-wrapper{
+    font-weight: 200;
+}
